@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 	"strconv"
 	"strings"
@@ -199,6 +200,7 @@ func main() {
 			select {
 			case item := <-c:
 				fmt.Printf("Get: %d\n", item)
+				log.Printf("Get: %d\n", item)
 			case <-done:
 				return
 			}
